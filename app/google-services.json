@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1051949942693",
+    "project_id": "madproject-y3",
+    "storage_bucket": "madproject-y3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051949942693:android:85e7ff2951b33bbb718a4c",
+        "android_client_info": {
+          "package_name": "kh.edu.rupp.dse.mobileapplicationproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTETIiAx6V11-U_qcYk2VEkDi87D4Ifrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
