@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "kh.edu.rupp.dse.mobileapplicationproject"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "kh.edu.rupp.dse.mobileapplicationproject"

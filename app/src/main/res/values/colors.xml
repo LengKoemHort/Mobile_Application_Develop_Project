@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="login_bg">#FCFCFC</color>
+    <color name="register">#37474F</color>
+    <color name="placeholder">#8037474F</color>
+    <color name="form">#E5E5E5</color>
+
 </resources>

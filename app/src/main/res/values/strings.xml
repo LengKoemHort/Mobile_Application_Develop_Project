@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MobileApplicationProject</string>
     <string name="todo">TODO</string>
+    <string name="Register">Register</string>
+    <string name="Email">E-mail</string>
+    <string name="Password">Password</string>
+    <string name="welcome">Welcome</string>
+    <string name="alex_johson">alex johson</string>
+    <string name="TODO">TODO</string>
 </resources>
