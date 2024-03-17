@@ -6,5 +6,6 @@
     <color name="register">#37474F</color>
     <color name="placeholder">#8037474F</color>
     <color name="form">#E5E5E5</color>
+    <color name="orange">#FFA500</color>
 
 </resources>
