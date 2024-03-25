@@ -1,4 +1,7 @@
 package kh.edu.rupp.dse.mobileapplicationproject.domain
 
-class Category {
-}
+data class Category(
+    var Id: Int = 0,
+    var ImagePath: String = "",
+    var Name: String = ""
+)

@@ -1,4 +1,4 @@
-package kh.edu.rupp.dse.mobileapplicationproject
+package kh.edu.rupp.dse.mobileapplicationproject.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

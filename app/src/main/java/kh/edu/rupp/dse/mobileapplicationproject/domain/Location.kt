@@ -1,4 +1,7 @@
-package kh.edu.rupp.dse.mobileapplicationproject.Domain
+package kh.edu.rupp.dse.mobileapplicationproject.domain
 
-class Location {
+class Location(var id: Int = 0, var loc: String = "") {
+    override fun toString(): String {
+        return loc
+    }
 }

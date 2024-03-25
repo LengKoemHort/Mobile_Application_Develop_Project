@@ -10,16 +10,16 @@
         android:id="@+id/cat1Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <eightbitlab.com.blurview.BlurView
-            android:id="@+id/blueView"
+            android:id="@+id/blurView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:background="@drawable/blur_background"
             app:blurOverlayColor="#20000000">
 
@@ -29,13 +29,13 @@
                 android:layout_height="72dp"
                 android:layout_gravity="center"
                 android:padding="12dp"
-                android:src="@tools:sample/avatars"
-                tools:srcCompat="@drawable/btn_1"
+                app:srcCompat="@drawable/btn_1"
                 tools:tint="@color/black" />
+
         </eightbitlab.com.blurview.BlurView>
 
         <TextView
-            android:id="@+id/titleCatTex"
+            android:id="@+id/titleCatText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="title"
@@ -45,6 +45,5 @@
             android:textColor="@color/white"
             android:textSize="16sp"
             tools:textColor="@color/black" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

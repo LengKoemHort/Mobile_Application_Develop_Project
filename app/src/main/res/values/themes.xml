@@ -6,6 +6,9 @@
     </style>
 
     <style name="Theme.MobileApplicationProject" parent="Base.Theme.MobileApplicationProject" >
+        <!-- Make the navigation bar translucent -->
         <item name="android:windowTranslucentNavigation">true</item>
+        <!-- Set the color of the navigation bar -->
+        <item name="android:navigationBarColor">@color/white</item>
     </style>
 </resources>

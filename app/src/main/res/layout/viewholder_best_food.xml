@@ -2,119 +2,119 @@
 <eightbitlab.com.blurview.BlurView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_margin="8dp"
     android:id="@+id/blueView"
     app:blurOverlayColor="#20000000"
     android:background="@drawable/blur_background"
-    android:layout_height="match_parent">
+    android:layout_width="260dp"
+    android:layout_height="295dp"
+    android:layout_margin="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="260dp"
-        android:layout_height="295dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/img"
             android:layout_width="0dp"
             android:layout_height="206dp"
             android:scaleType="centerCrop"
-            android:src="@tools:sample/avatars"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/BBQ_Ranch_Delight" />
+            tools:srcCompat="@drawable/food"
+            />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toBottomOf="@id/img">
 
             <TextView
-                android:id="@+id/titleTex"
+                android:id="@+id/titleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
                 android:textColor="@color/white"
+                tools:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                tools:textColor="@color/black" />
+                android:layout_marginEnd="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/starTex"
+                android:id="@+id/priceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="$0"
+                android:textColor="#F93C64"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/titleText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/titleText" />
+
+            <TextView
+                android:id="@+id/starText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintStart_toStartOf="@+id/titleText"
+                tools:textColor="@color/black" />
 
-            <TextView
-                android:id="@+id/priceTex"
+            <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$0"
-                android:textColor="#F93C64"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="216dp"
-                tools:layout_editor_absoluteY="1dp" />
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/starText"
+                app:layout_constraintStart_toEndOf="@+id/starText"
+                app:layout_constraintTop_toTopOf="@+id/starText"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="44dp"
+                android:layout_height="39dp"
+                android:textColor="@color/white"
+                android:text="+"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:background="@drawable/plus_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textColor="@color/white"
+                tools:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/starText"
+                app:layout_constraintEnd_toStartOf="@+id/textView8"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/starText" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:src="@tools:sample/avatars"
-                app:layout_constraintBottom_toBottomOf="@+id/starTex"
-                app:layout_constraintStart_toEndOf="@+id/starTex"
-                tools:srcCompat="@drawable/star" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="44dp"
-                android:layout_height="39dp"
-                android:textColor="@color/white"
-                android:textSize="30dp"
-                android:gravity="center"
-                android:background="@drawable/plus_background"
-                android:text="+"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/priceTex" />
-
-            <TextView
-                android:id="@+id/timeTex"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="time"
-                android:textColor="@color/white"
-                tools:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/starTex"
-                app:layout_constraintEnd_toStartOf="@+id/textView10"
-                app:layout_constraintStart_toEndOf="@+id/imageView2" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:src="@tools:sample/avatars"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/timeTex"
-                app:layout_constraintTop_toTopOf="@+id/timeTex"
-                app:layout_constraintVertical_bias="0.0"
-                tools:srcCompat="@drawable/time" />
+                app:layout_constraintBottom_toBottomOf="@+id/timeText"
+                app:layout_constraintStart_toEndOf="@+id/timeText"
+                app:layout_constraintTop_toTopOf="@+id/timeText"
+                app:srcCompat="@drawable/time" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </eightbitlab.com.blurview.BlurView>

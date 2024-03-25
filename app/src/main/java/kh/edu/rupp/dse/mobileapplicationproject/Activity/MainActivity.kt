@@ -1,10 +1,18 @@
-package kh.edu.rupp.dse.mobileapplicationproject
+package kh.edu.rupp.dse.mobileapplicationproject.Activity
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
+import kh.edu.rupp.dse.mobileapplicationproject.R
+import kh.edu.rupp.dse.mobileapplicationproject.adapter.BestFoodAdapter
+import kh.edu.rupp.dse.mobileapplicationproject.adapter.CategoryAdapter
 import kh.edu.rupp.dse.mobileapplicationproject.databinding.ActivityMainBinding
+import kh.edu.rupp.dse.mobileapplicationproject.domain.Category
+import kh.edu.rupp.dse.mobileapplicationproject.domain.Foods
 import kh.edu.rupp.dse.mobileapplicationproject.domain.Location
 import kh.edu.rupp.dse.mobileapplicationproject.domain.Price
 import kh.edu.rupp.dse.mobileapplicationproject.domain.Time
@@ -23,6 +31,63 @@ class MainActivity : AppCompatActivity() {
         initLocation()
         initTime()
         initPrice()
+        initBestFood()
+        initCategory()
+    }
+
+    private fun initCategory() {
+        val myRef = databaseReference.child("Category")
+        binding.progressBar2.visibility = View.VISIBLE
+        val list = ArrayList<Category>()
+
+        myRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (issue in snapshot.children) {
+                        issue.getValue(Category::class.java)?.let { list.add(it) }
+                    }
+                    if (list.size > 0) {
+                        binding.CategoryView.layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
+                        val adapter = CategoryAdapter(list)
+                        binding.CategoryView.adapter = adapter
+                    }
+                    binding.progressBar2.visibility = View.GONE
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Handle onCancelled
+                binding.progressBar2.visibility = View.GONE
+            }
+        })
+    }
+
+    private fun initBestFood() {
+        val myRef = databaseReference.child("Foods")
+        binding.progressBar1.visibility = View.VISIBLE
+        val list = ArrayList<Foods>()
+        val query: Query = myRef.orderByChild("BestFood").equalTo(true)
+
+        query.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (issue in snapshot.children) {
+                        issue.getValue(Foods::class.java)?.let { list.add(it) }
+                    }
+                    if (list.size > 0) {
+                        binding.bestFoodView.layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
+                        val adapter = BestFoodAdapter(list)
+                        binding.bestFoodView.adapter = adapter
+                    }
+                    binding.progressBar1.visibility = View.GONE
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Handle onCancelled
+                binding.progressBar1.visibility = View.GONE
+            }
+        })
     }
 
     private fun initLocation() {
