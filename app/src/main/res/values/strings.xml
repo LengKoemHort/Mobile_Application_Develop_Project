@@ -7,4 +7,9 @@
     <string name="welcome">Welcome</string>
     <string name="alex_johson">alex johson</string>
     <string name="TODO">TODO</string>
+    <string name="text_detail">Indulge in comfort with the Chili Cheese Dog, a hearty delight boasting a beef hot dog smothered in rich chili, melted chedder cheese, and diced onions. Indulge in comfort with the Chili Cheese Dog hearty delight boasting a beef hot dog smothered in rich chili, melted cheddear cheese, and diced onions.</string>
+    <string name="quantity">Quantity</string>
+    <string name="todo1">TODO</string>
+    <string name="plus">+</string>
+    <string name="add_to_cart">Add to cart</string>
 </resources>
