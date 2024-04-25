@@ -2,16 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     tools:context=".Activity.DetailActivity">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-55dp"
-        tools:layout_editor_absoluteY="-16dp">
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-59dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,53 +22,42 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="400dp">
+                android:layout_height="422dp">
 
                 <ImageView
                     android:id="@+id/pic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="TODO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
                     android:scaleType="centerCrop"
-                    android:src="@tools:sample/avatars"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/food" />
 
                 <ImageView
-                    android:id="@+id/BACKBTN"
+                    android:id="@+id/backBtn"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
-                    android:cropToPadding="true"
-                    android:src="@tools:sample/avatars"
+                    android:padding="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/back"
-                    android:contentDescription="@string/todo1" />
+                    app:srcCompat="@drawable/back" />
 
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:contentDescription="TODO"
-                    android:src="@tools:sample/avatars"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/pic"
                     app:layout_constraintEnd_toEndOf="parent"
-                    tools:srcCompat="@drawable/favorite_white" />
-
+                    app:layout_constraintTop_toBottomOf="@+id/pic"
+                    app:srcCompat="@drawable/favorite_white" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <eightbitlab.com.blurview.BlurView
-                android:id="@id/blurView"
+                android:id="@+id/blurView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -87,7 +78,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView"
+                            android:id="@+id/titleTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -97,14 +88,13 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/priceTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0$"
                             android:textColor="@color/orange"
                             android:textSize="20sp"
                             android:textStyle="bold" />
-
                     </LinearLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -118,59 +108,68 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
+                            android:indeterminate="false"
                             android:numStars="5"
                             android:progressTint="#ffc106"
                             android:rating="3.4"
-                            android:stepSize="0.0"
-                            app:layout_constraintBaseline_toTopOf="parent"
+                            android:stepSize="0.1"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ratingTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="rating"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
                             android:id="@+id/imageView11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@tools:sample/avatars"
+                            android:layout_marginEnd="16dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.88"
-                            app:layout_constraintStart_toEndOf="@+id/ratingBar"
                             app:layout_constraintTop_toTopOf="parent"
-                            tools:srcCompat="@drawable/time" />
+                            app:srcCompat="@drawable/time" />
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/timeTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="15min"
+                            android:layout_marginEnd="6dp"
+                            android:text="15 min"
                             android:textColor="@color/white"
+                            android:textSize="16sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/imageView11"
-                            app:layout_constraintHorizontal_bias="0.92"
-                            app:layout_constraintStart_toEndOf="@+id/ratingBar"
                             app:layout_constraintTop_toTopOf="parent" />
-
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:text="Detail"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16sp"
-                        android:text="@string/text_detail"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Details"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/descriptionTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="Indulge in comfort with chilly cheese dog, a hearty delight boosting a beef hot dog smoothered in rich chill, melted cheddar cheese and diced onions.
+Indulge in comfort with chilly cheese dog, a hearty delight boosting a beef hot dog smoothered in rich chill, melted cheddar cheese and diced onions."
                         android:textColor="@color/white"
                         android:textSize="16sp" />
 
@@ -180,127 +179,120 @@
                         android:layout_margin="16dp">
 
                         <TextView
-                            android:id="@+id/textView11"
+                            android:id="@+id/textView12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="@string/quantity"
+                            android:text="Quantity"
                             android:textColor="@color/white"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintBottom_toStartof="parent"
-                            app:layout_constraintBottom_toTopof="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            tools:ignore="MissingConstraints" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/minusbtn"
+                            android:id="@+id/minusBtn"
                             android:layout_width="28dp"
                             android:layout_height="28dp"
+                            android:layout_marginStart="32dp"
                             android:background="@drawable/oval_bg"
                             android:gravity="center"
                             android:text="-"
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            app:layout_constraintEnd_toTopOf="parent"
-                            tools:ignore="MissingConstraints,NotSibling"
-                            tools:layout_editor_absoluteX="123dp"
-                            tools:layout_editor_absoluteY="0dp" />
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView12"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/textView13"
+                            android:id="@+id/numTxt"
                             android:layout_width="20dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="20dp"
                             android:layout_marginStart="8dp"
                             android:gravity="center"
                             android:text="1"
                             android:textColor="@color/white"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/minusbtn"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintStart_toEndOf="@+id/minusBtn"
+                            app:layout_constraintTop_toTopOf="@+id/minusBtn" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/plusBtn"
                             android:layout_width="28dp"
                             android:layout_height="28dp"
                             android:layout_marginStart="8dp"
                             android:background="@drawable/oval_bg"
                             android:gravity="center"
-                            android:text="@string/plus"
+                            android:text="+"
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView13"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintBottom_toBottomOf="@+id/minusBtn"
+                            app:layout_constraintStart_toEndOf="@+id/numTxt"
+                            app:layout_constraintTop_toTopOf="@+id/minusBtn" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
             </eightbitlab.com.blurview.BlurView>
-
-            <eightbitlab.com.blurview.BlurView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:blurOverlayColor="#20000000">
-
-            </eightbitlab.com.blurview.BlurView>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button"
-                    style="@android:style/Widget.Button"
-                    android:layout_width="154dp"
-                    android:layout_height="52dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/button_bg"
-                    android:drawableStart="@drawable/basket"
-                    android:paddingStart="16dp"
-                    android:text="Add to cart"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="Total Price"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/button"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0$"
-                    android:textColor="@color/white"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/button"
-                    app:layout_constraintHorizontal_bias="0.11"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
     </ScrollView>
 
+    <eightbitlab.com.blurview.BlurView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:blurOverlayColor="#20000000"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addBtn"
+                android:layout_width="180dp"
+                style="@android:style/Widget.Button"
+                android:background="@drawable/button_bg"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:drawableStart="@drawable/basket"
+                android:text="Add to Cart"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Total Price:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="0$"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintTop_toTopOf="@+id/textView16" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </eightbitlab.com.blurview.BlurView>
 </androidx.constraintlayout.widget.ConstraintLayout>

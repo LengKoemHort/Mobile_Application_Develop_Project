@@ -15,5 +15,5 @@ data class Foods(
     var TimeId: Int = 0,
     var TimeValue: Int = 0,
     var Title: String = "",
-    var NumberInChart: Int = 0
+    var NumberInCart: Int = 0
 ) : Serializable
