@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "1051949942693",
-    "project_id": "madproject-y3",
-    "storage_bucket": "madproject-y3.appspot.com"
+    "project_number": "73252209869",
+    "firebase_url": "https://mobileapplicationproject-b2cc2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mobileapplicationproject-b2cc2",
+    "storage_bucket": "mobileapplicationproject-b2cc2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1051949942693:android:85e7ff2951b33bbb718a4c",
+        "mobilesdk_app_id": "1:73252209869:android:4d94b018cd125383159584",
         "android_client_info": {
           "package_name": "kh.edu.rupp.dse.mobileapplicationproject"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDTETIiAx6V11-U_qcYk2VEkDi87D4Ifrs"
+          "current_key": "AIzaSyCkgeWSdeJOjx_i1WJ1IG-Ka7soMPOwuUM"
         }
       ],
       "services": {

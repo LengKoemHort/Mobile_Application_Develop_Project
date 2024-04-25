@@ -1,0 +1,19 @@
+package kh.edu.rupp.dse.mobileapplicationproject.domain
+
+import java.io.Serializable
+
+data class Foods(
+    var CategoryId: Int = 0,
+    var Description: String = "",
+    var BestFood: Boolean = false,
+    var Id: Int = 0,
+    var LocationId: Int = 0,
+    var Price: Double = 0.0,
+    var ImagePath: String = "",
+    var PriceId: Int = 0,
+    var Star: Double = 0.0,
+    var TimeId: Int = 0,
+    var TimeValue: Int = 0,
+    var Title: String = "",
+    var NumberInChart: Int = 0
+) : Serializable
