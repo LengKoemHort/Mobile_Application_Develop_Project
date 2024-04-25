@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import com.google.firebase.database.FirebaseDatabase
 
-class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity() {
 
     private lateinit var database: FirebaseDatabase
 
