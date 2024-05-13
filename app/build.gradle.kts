@@ -52,4 +52,6 @@ dependencies {
     implementation ("com.github.Dimezis:Blurview:version-2.0.3")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+    implementation("com.google.code.gson:gson:2.8.8")
+
 }

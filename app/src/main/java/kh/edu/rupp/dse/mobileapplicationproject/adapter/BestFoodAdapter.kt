@@ -2,6 +2,7 @@ package kh.edu.rupp.dse.mobileapplicationproject.adapter
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import eightbitlab.com.blurview.BlurView
 import eightbitlab.com.blurview.RenderScriptBlur
+import kh.edu.rupp.dse.mobileapplicationproject.Activity.DetailActivity
 import kh.edu.rupp.dse.mobileapplicationproject.domain.Foods
 import kh.edu.rupp.dse.mobileapplicationproject.R
 
@@ -51,6 +53,14 @@ class BestFoodAdapter(private val items: ArrayList<Foods>) : RecyclerView.Adapte
             .load(item.ImagePath)
             .transform(CenterCrop(), RoundedCorners(30))
             .into(holder.pic)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, DetailActivity::class.java).apply {
+                putExtra("food", item)
+            }
+            context.startActivity(intent)
+        }
+
     }
 
     override fun getItemCount(): Int {
