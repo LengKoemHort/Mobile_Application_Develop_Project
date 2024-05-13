@@ -12,4 +12,14 @@
     <string name="todo1">TODO</string>
     <string name="plus">+</string>
     <string name="add_to_cart">Add to cart</string>
+    <string name="apply_coupon">Apply Coupon</string>
+    <string name="oder_summary">Oder Summary</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="card">Card</string>
+    <string name="delivery">Delivery</string>
+    <string name="_0">$0</string>
+    <string name="$0">$0</string>
+    <string name="total_tax">Total Tax</string>
+    <string name="enter_your_code">Enter Your Code</string>
+    <string name="prace_order">Prace Order</string>
 </resources>
