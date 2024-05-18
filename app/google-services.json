@@ -1,27 +1,45 @@
 {
   "project_info": {
-    "project_number": "73252209869",
-    "firebase_url": "https://mobileapplicationproject-b2cc2-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "mobileapplicationproject-b2cc2",
-    "storage_bucket": "mobileapplicationproject-b2cc2.appspot.com"
+    "project_number": "897066750942",
+    "firebase_url": "https://mobile-dev-2024-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mobile-dev-2024",
+    "storage_bucket": "mobile-dev-2024.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:73252209869:android:4d94b018cd125383159584",
+        "mobilesdk_app_id": "1:897066750942:android:b002556e688a9f4c72034f",
         "android_client_info": {
           "package_name": "kh.edu.rupp.dse.mobileapplicationproject"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "897066750942-i43h9momojf7d9p75jq686u7hhtdmuq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kh.edu.rupp.dse.mobileapplicationproject",
+            "certificate_hash": "6188bcead8e0b9fcf41c4c281fac3cde3cc680b1"
+          }
+        },
+        {
+          "client_id": "897066750942-gb2iunkhkggttma5rgjkldfjdvtqc9il.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCkgeWSdeJOjx_i1WJ1IG-Ka7soMPOwuUM"
+          "current_key": "AIzaSyBXGfmHAspotTdLt47re9ih3FJJ1PfPhYY"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897066750942-gb2iunkhkggttma5rgjkldfjdvtqc9il.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
