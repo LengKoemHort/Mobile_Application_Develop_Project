@@ -1,22 +1,23 @@
 package kh.edu.rupp.dse.mobileapplicationproject.Activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowManager
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
 open class BaseActivity : AppCompatActivity() {
 
-    private lateinit var database: FirebaseDatabase
+    protected lateinit var mAuth: FirebaseAuth
+    protected lateinit var database: FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        mAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
 
-        // Set flags for the window
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        )
+        // Enable edge-to-edge display
+        enableEdgeToEdge()
     }
 }

@@ -1,9 +1,9 @@
-package kh.edu.rupp.dse.mobileapplicationproject.Helper
+package kh.edu.rupp.dse.mobileapplicationproject.Helperimport
 
 import android.content.Context
 import android.widget.Toast
-import kh.edu.rupp.dse.mobileapplicationproject.domain.Foods
-import java.util.ArrayList
+import kh.edu.rupp.dse.mobileapplicationproject.Domain.Foods
+import kh.edu.rupp.dse.mobileapplicationproject.Helper.TinyDB
 
 class ManagementCart(private val context: Context) {
     private val tinyDB: TinyDB = TinyDB(context)
@@ -44,7 +44,7 @@ class ManagementCart(private val context: Context) {
     fun minusNumberItem(
         listItem: ArrayList<Foods>,
         position: Int,
-        changeNumberItemsListener: ChangeNumberItemsListener
+        changeNumberItemsListener: () -> Unit
     ) {
         if (listItem[position].NumberInCart == 1) {
             listItem.removeAt(position)
@@ -52,16 +52,16 @@ class ManagementCart(private val context: Context) {
             listItem[position].NumberInCart--
         }
         tinyDB.putListObject("CartList", listItem)
-        changeNumberItemsListener.change()
+        changeNumberItemsListener.invoke() // Invoking the lambda
     }
 
     fun plusNumberItem(
         listItem: ArrayList<Foods>,
         position: Int,
-        changeNumberItemsListener: ChangeNumberItemsListener
+        changeNumberItemsListener: () -> Unit
     ) {
         listItem[position].NumberInCart++
         tinyDB.putListObject("CartList", listItem)
-        changeNumberItemsListener.change()
+        changeNumberItemsListener.invoke() // Invoking the lambda
     }
 }

@@ -6,20 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".Activity.DetailActivity"
-    tools:ignore="ExtraText">
+    tools:context=".Activity.DetailActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-<<<<<<< HEAD
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="234dp">
-=======
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="-59dp">
->>>>>>> c6cbbd60d87b0d9ef924bcbf5c18263c2559e964
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,26 +22,12 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-<<<<<<< HEAD
-                android:layout_height="match_parent" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="400dp">
-
-                <ImageView
-                    android:id="@+id/pic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-=======
                 android:layout_height="422dp">
 
                 <ImageView
                     android:id="@+id/pic"
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
->>>>>>> c6cbbd60d87b0d9ef924bcbf5c18263c2559e964
                     android:scaleType="centerCrop"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -60,13 +40,7 @@
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
-<<<<<<< HEAD
-                    android:contentDescription="@string/todo1"
-                    android:cropToPadding="true"
-                    android:src="@tools:sample/avatars"
-=======
                     android:padding="8dp"
->>>>>>> c6cbbd60d87b0d9ef924bcbf5c18263c2559e964
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/back" />
@@ -169,35 +143,13 @@
                             android:id="@+id/timeTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-<<<<<<< HEAD
-                            android:text="15min"
-                            android:textSize="16dp"
-=======
                             android:layout_marginEnd="6dp"
                             android:text="15 min"
->>>>>>> c6cbbd60d87b0d9ef924bcbf5c18263c2559e964
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/imageView11"
                             app:layout_constraintTop_toTopOf="parent" />
-<<<<<<< HEAD
-
-                        <TextView
-                            android:id="@+id/textView17"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="3.4 Rating"
-                            android:textSize="16dp"
-                            android:textColor="@color/white"
-
-                            app:layout_constraintEnd_toStartOf="@+id/textView5"
-                            app:layout_constraintStart_toEndOf="@+id/ratingBar"
-                            app:layout_constraintTop_toTopOf="@+id/textView5"
-                            tools:ignore="MissingConstraints" />
-
-=======
->>>>>>> c6cbbd60d87b0d9ef924bcbf5c18263c2559e964
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
@@ -249,18 +201,9 @@ Indulge in comfort with chilly cheese dog, a hearty delight boosting a beef hot 
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold"
-<<<<<<< HEAD
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintEnd_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.09"
-                            app:layout_constraintStart_toEndOf="@+id/textView11"
-                            tools:ignore="MissingConstraints,NotSibling"
-                            tools:layout_editor_absoluteY="0dp" />
-=======
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/textView12"
                             app:layout_constraintTop_toTopOf="parent" />
->>>>>>> c6cbbd60d87b0d9ef924bcbf5c18263c2559e964
 
                         <TextView
                             android:id="@+id/numTxt"
@@ -273,15 +216,8 @@ Indulge in comfort with chilly cheese dog, a hearty delight boosting a beef hot 
                             android:textSize="16sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
-<<<<<<< HEAD
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toEndOf="@+id/minusbtn"
-                            app:layout_constraintTop_toTopOf="parent" />
-=======
                             app:layout_constraintStart_toEndOf="@+id/minusBtn"
                             app:layout_constraintTop_toTopOf="@+id/minusBtn" />
->>>>>>> c6cbbd60d87b0d9ef924bcbf5c18263c2559e964
 
                         <TextView
                             android:id="@+id/plusBtn"
@@ -294,78 +230,6 @@ Indulge in comfort with chilly cheese dog, a hearty delight boosting a beef hot 
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold"
-<<<<<<< HEAD
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toEndOf="@+id/textView13"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
-            </eightbitlab.com.blurview.BlurView>
-
-            <eightbitlab.com.blurview.BlurView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:blurOverlayColor="#20000000"
-                tools:ignore="MissingConstraints">
-
-            </eightbitlab.com.blurview.BlurView>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button"
-                    style="@android:style/Widget.Button"
-                    android:layout_width="154dp"
-                    android:layout_height="52dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/button_bg"
-                    android:drawableStart="@drawable/basket"
-                    android:paddingStart="16dp"
-                    android:text="Add to cart"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="Total Price"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/button"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0$"
-                    android:textColor="@color/white"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/button"
-                    app:layout_constraintHorizontal_bias="0.06"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.58000004"
-                    tools:ignore="MissingConstraints" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-=======
                             app:layout_constraintBottom_toBottomOf="@+id/minusBtn"
                             app:layout_constraintStart_toEndOf="@+id/numTxt"
                             app:layout_constraintTop_toTopOf="@+id/minusBtn" />
@@ -373,7 +237,6 @@ Indulge in comfort with chilly cheese dog, a hearty delight boosting a beef hot 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
             </eightbitlab.com.blurview.BlurView>
->>>>>>> c6cbbd60d87b0d9ef924bcbf5c18263c2559e964
         </LinearLayout>
     </ScrollView>
 
