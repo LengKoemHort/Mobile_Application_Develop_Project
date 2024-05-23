@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".Activity.DetailActivity">
+    tools:context=".Activity.DetailActivity"
+    tools:ignore="ExtraText">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -306,7 +307,8 @@ Indulge in comfort with chilly cheese dog, a hearty delight boosting a beef hot 
             <eightbitlab.com.blurview.BlurView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:blurOverlayColor="#20000000">
+                app:blurOverlayColor="#20000000"
+                tools:ignore="MissingConstraints">
 
             </eightbitlab.com.blurview.BlurView>
 
