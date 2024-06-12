@@ -12,7 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your Cart is Empty"
-
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +61,6 @@
                     android:ems="10"
                     android:hint="Enter Your Code"
                     android:inputType="text"
-
                     android:textAlignment="center"
                     android:textSize="14sp" />
 
@@ -75,7 +73,39 @@
                     android:backgroundTint="@color/pink"
                     android:text="Apply Coupon"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Pin Your Location"
+                android:textSize="22sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="5dp">
+
+                <org.osmdroid.views.MapView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <ImageView
+                    android:id="@+id/fullscreenBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|top"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:src="@drawable/baseline_crop_free_24"
+                    android:contentDescription="Full Screen" />
+            </FrameLayout>
 
             <TextView
                 android:id="@+id/textView9"
@@ -126,6 +156,7 @@
                     app:layout_constraintStart_toStartOf="@+id/textView14"
                     app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
+
                 <TextView
                     android:id="@+id/totalFeeTxt"
                     android:layout_width="wrap_content"
@@ -148,6 +179,7 @@
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
 
                 <TextView
                     android:id="@+id/taxTxt"
